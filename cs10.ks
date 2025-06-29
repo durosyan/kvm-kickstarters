@@ -27,12 +27,11 @@ network  --bootproto=dhcp --device=enp1s0 --ipv6=auto --activate
 # Root password
 # password: mysuperpassword
 rootpw --iscrypted $6$sTl..plfgEjSxym4$rRhu5I1O9OqGVCQdgW.m3Uccw/9IkDSGx9Wu1gWMXmznJEZnm3AAPUCub7F28K/KUZezx5SiEz4z73PTs2cBe.
-sshkey --username=root 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILWo3RJ88qk1RS+P6b8U+rFJ1GpIxKvWW7AGrgiCx8dK renich@desktop'
 
 # users
 # password: myveryhardpassword
-user --groups=wheel,webdev,gitters,deployers --name=renich --password=$6$OjnazjvGDaLmciUG$hjGtLuSQ/.pHBkzDz30Wcr27OLQEiEZpVAi/6mlocZN0Sxcq3hKvAosQTsEEq2Wst1OrNfabtooXjpQsiM07.1 --iscrypted --gecos='Renich Bon Ćírić'
-sshkey --username=renich 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILWo3RJ88qk1RS+P6b8U+rFJ1GpIxKvWW7AGrgiCx8dK renich@desktop'
+user --groups=wheel --name=durosyan --password=$6$7bk.Zz22jCOv5Yb4$6QAVlCViZGoFfWJeFpVus8UHuuH5FWPkjt8cftaZ1xF8jzARCLJk5yBrXm0zwzMKO1EyqvnV0mnTpecfpjsLv1 --iscrypted --gecos='durosyan'
+sshkey --username=durosyan 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB+3chBE7SoWWGX7VRWOwlm7RCzVuQZZhJU4tGdseiL7 durosyan@acernitro'
 
 # Run the Setup Agent on first boot
 firstboot --disable
@@ -98,7 +97,7 @@ wireshark-cli
 
 # grub
 grubby \
-	--args='console=ttyS0,38400n8d vconsole.keymap=es' \
+	--args='console=ttyS0,38400n8d vconsole.keymap=gb' \
 	--update-kernel=ALL
 
 # network security
