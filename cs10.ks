@@ -177,6 +177,12 @@ set laststatus=2
 
 EOF
 
+# configure PS1
+cat << 'EOF' >> /etc/skel/.bashrc
+PS1='\[\e[95m\]\u@\h\[\e[0m\]: \[\e[38;5;27m\]\w\[\e[0m\]\$ '
+
+EOF
+
 # copy skel files to root and users
 cp --update=all /etc/skel/.* /root/
 for u in /home/*; do
