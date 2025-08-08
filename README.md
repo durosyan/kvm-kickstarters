@@ -21,10 +21,12 @@ Apparently to check the validity of the debian preseed file use:
 
 Helpful commands:
 
+
 ```bash
-virsh console "domain"
-virsh dominfo "domain"
-virsh domifaddr "domain"
+virsh console <vm-name>
+virsh dominfo <vm-name>
+virsh domifaddr <vm-name>
+virsh dumpxml <vm-name>
 ```
 
 ---
