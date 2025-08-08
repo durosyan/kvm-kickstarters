@@ -1,0 +1,28 @@
+#cloud-config
+# https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html
+# https://canonical-subiquity.readthedocs-hosted.com/en/latest/intro-to-autoinstall.html
+# https://cloudinit.readthedocs.io/en/latest/
+
+autoinstall:
+  version: 1
+  identity:
+    hostname: ubu24
+    username: durosyan
+    password: "$6$KhYx4KkBf3F4v.F9$gmEhk3EaTnLr76.S.url2x84HuOHthqdQKw.zyf.RR6ZsEXpMmixO.SaWHA.G1Xqt5dFEPmC7E9q.Leism3.8."  # chungusyourpungus
+  ssh:
+    install-server: true
+  locale: en_US
+  keyboard:
+    layout: us
+  network:
+    network:
+      version: 2
+      ethernets:
+        ens3:
+          dhcp4: true
+  storage:
+    layout:
+      name: lvm
+  packages:
+    - qemu-guest-agent
+    - htop
