@@ -15,3 +15,6 @@ virt-install \
 	--extra-args="inst.ks=file:/cs10.ks" \
 	--location=https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/os/ \
 	--initrd-inject=cs10.ks
+	# --noautoconsole \
+	# --graphics=none
+  
