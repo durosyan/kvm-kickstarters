@@ -12,9 +12,20 @@ To make the password required for a kickstart file, the passwords are hashed in 
 
 `openssl passwd -6`
 
+
 Apparently to check the validity of the debian preseed file use:
 
+
 `debconf-set-selections -c preseed.cfg`
+
+
+Helpful commands:
+
+```bash
+virsh console "domain"
+virsh dominfo "domain"
+virsh domifaddr "domain"
+```
 
 ---
 
