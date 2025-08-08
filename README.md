@@ -27,6 +27,9 @@ virsh console <vm-name>
 virsh dominfo <vm-name>
 virsh domifaddr <vm-name>
 virsh dumpxml <vm-name>
+virsh destroy <vm-id>
+virsh shutdown <vm-id>
+virsh undefine <vm-name> --remove-all-storage
 ```
 
 ---
