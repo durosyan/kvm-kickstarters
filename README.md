@@ -1,6 +1,5 @@
 # KVM and kickstart files
 
-
 Just some scripts to spin up and provision vritual machines in an unnattended way with qemu/kvm.
 
 
@@ -13,5 +12,10 @@ To make the password required for a kickstart file, the passwords are hashed in 
 
 `openssl passwd -6`
 
+Apparently to check the validity of the debian preseed file use:
+
+`debconf-set-selections -c preseed.cfg`
+
+---
 
 ![a picture of nearly headless nick from harry potter, because this setup is, well, nearly headless](./image.png)
